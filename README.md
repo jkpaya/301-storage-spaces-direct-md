@@ -1,5 +1,5 @@
-# Use Managed Disks to Create a Storage Spaces Direct (S2D) Scale-Out File Server (SOFS) Cluster with Windows Server 2016
-This template will create a Storage Spaces Direct (S2D) Scale-Out File Server (SOFS) cluster using Windows Server 2016 and Managed Disks in an existing VNET and Active Directory environment.
+# Use Managed Disks to Create a Storage Spaces Direct (S2D) Scale-Out File Server (SOFS) Cluster with Windows Server 2019
+This template will create a Storage Spaces Direct (S2D) Scale-Out File Server (SOFS) cluster using Windows Server 2019 and Managed Disks in an existing VNET and Active Directory environment.
 
 This template provisions and configures the following resources by default:
 
@@ -15,10 +15,10 @@ To deploy the required Azure VNET and Active Directory infrastructure, if not al
 
 Click the button below to deploy from the portal:
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FSteven-N%2F301-storage-spaces-direct-md%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjkpaya%2F301-storage-spaces-direct-md%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FSteven-N%2F301-storage-spaces-direct-md%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fjkpaya%2F301-storage-spaces-direct-md%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
@@ -26,13 +26,13 @@ Click the button below to deploy from the portal:
 
 +	The default settings for storage are to deploy using **premium storage**, which is **strongly** recommended for S2D performance.  When using Premium Storage, be sure to select a VM size (DS-series, GS-series) that supports Premium Storage.
 
-+   The default Azure VM size setting is Standard_DS4 (v2) which is strongly recommended as a starting configuration for testing network IO performance for S2D and SOFS.  This default setting requires 16 cores of free quota to deploy.
++   The default Azure VM size setting is Standard_DS3 (v2) which is strongly recommended as a starting configuration for testing network IO performance for S2D and SOFS.  This default setting requires 16 cores of free quota to deploy.
 
-+   The default settings deploy 2 data disks per storage node, but can be increased to up to 32 data disks per node.  When increasing # of data disks, be sure to select a VM size that can support the # of data disks you specify.
++   The default settings deploy 5 data disks per storage node, but can be increased to up to 32 data disks per node.  When increasing # of data disks, be sure to select a VM size that can support the # of data disks you specify.
 
 + 	The images used to create this deployment are
     +   Windows Server 2016 Datacenter Edition - Server Core (Default)
-	+ 	Windows Server 2016 Datacenter Edition
+	+ 	Windows Server 2019 Datacenter Edition
 
 +	To successfully deploy this template, be sure that the subnet to which the storage nodes are being deployed already exists on the specified Azure virtual network, AND this subnet should be defined in Active Directory Sites and Services for the appropriate AD site in which the closest domain controllers are configured.
 
@@ -65,4 +65,4 @@ one will be created by the script or reused if it already exists (think of this 
 azure-group-deploy.sh -a '301-storage-spaces-direct' -l eastus -u
 ```
 
-Tags: ``cluster, ha, storage spaces, storage spaces direct, S2D, windows server 2016, ws2016``
+Tags: ``cluster, ha, storage spaces, storage spaces direct, S2D, windows server 2019, ws2016``
