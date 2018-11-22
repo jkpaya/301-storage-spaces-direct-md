@@ -123,7 +123,7 @@
         },
         "imageSku": {
             "type": "string",
-            "defaultValue": "2016-Datacenter-Server-Core"
+            "defaultValue": "2019-Datacenter"
         },
         "imageVersion": {
             "type": "string",
@@ -194,7 +194,7 @@
                 ],                
                 "dnsSettings": {
                     "dnsServers": [
-                        "10.0.6.4"
+                        "10.1.32.37"
                     ]
                 },
                 "enableAcceleratedNetworking": "[parameters('enableAcceleratedNetworking')]"
