@@ -32,7 +32,7 @@
       "metadata": {
         "description": "Operating System Image to use for provisioning each S2D VM"
       },
-      "defaultValue": "2019-Datacenter-Server-Core"
+      "defaultValue": "2019-Datacenter"
     },
     "vmCount": {
       "type": "int",
