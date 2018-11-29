@@ -26,13 +26,13 @@
     "imageSku":{
       "type": "string",
       "allowedValues": [
-        "2019-Datacenter-Server-Core",
-        "2019-Datacenter"
+        "2016-Datacenter-Server-Core",
+        "2016-Datacenter"
       ],
       "metadata": {
         "description": "Operating System Image to use for provisioning each S2D VM"
       },
-      "defaultValue": "2019-Datacenter"
+      "defaultValue": "2016-Datacenter"
     },
     "vmCount": {
       "type": "int",
