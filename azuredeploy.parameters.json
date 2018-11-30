@@ -9,10 +9,10 @@
       "value": "bws.local"
     },
     "adminUsername": {
-      "value": "sysadmin"
+      "value": "AzureAdmin"
     },
     "adminPassword": {
-      "value": "!B1ffa.B1ffa!"
+      "value": "GEN-PASSWORD"
     },
     "existingVirtualNetworkName": {
       "value": "Vnet-33"
